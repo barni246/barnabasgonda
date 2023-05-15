@@ -7,23 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlideshowComponent implements OnInit {
 
-  images = ['keyboard-gc.jpg','keyboard.jpg','keyboard-w.jpg'];
-headlines = ['Bring engineering to the next level','Born to code','Graduated at TUM'];
-currentImage = 0;
-showImage = true;
+  images = ['keyboard-gc.jpg', 'keyboard.jpg', 'keyboard-w.jpg'];
+  headlines = ['Bring engineering to the next level', 'Born to code', 'Graduated at TUM'];
+  currentImage = 0;
+  showImage = true;
 
-ngOnInit() {
-this.updateImage();
-}
+  ngOnInit() {
+    this.updateImage();
+  }
 
-updateImage() {
-setInterval(() => {
-this.currentImage++;
-this.currentImage = this.currentImage % this.images.length;
-this.showImage = false;
-setTimeout(() => {
-  this.showImage = true;
-}, 10);
-}, 8000);
-}
+  updateImage() {
+    setInterval(() => {
+      this.currentImage++;
+      this.currentImage = this.currentImage % this.images.length;
+      this.showImage = false;
+      setTimeout(() => {
+        this.showImage = true;
+      }, 10);
+    }, 8000);
+  }
 }
