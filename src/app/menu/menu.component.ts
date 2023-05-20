@@ -7,4 +7,5 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MenuComponent {
 @Input() darkMode = true;
+
 }
